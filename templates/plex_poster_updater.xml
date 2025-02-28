@@ -2,7 +2,7 @@
 <Container>
   <Name>Plex Poster Updater</Name>
   <Repository>ghcr.io/YOUR_GITHUB_USERNAME/plex_poster_updater:latest</Repository>
-  <Registry>https://github.com/YOUR_GITHUB_USERNAME/plex_poster_updater</Registry>
+  <Registry>https://github.com/vwdewaal/plex_poster_updater</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Privileged>false</Privileged>
@@ -14,8 +14,9 @@
   <Config Name="Plex Token" Target="PLEX_TOKEN" Default="" Required="true" Mask="true" Description="Enter your Plex API Token" Type="Text"/>
   <Config Name="TMDb API Key" Target="TMDB_API_KEY" Default="" Required="true" Mask="true" Description="Enter your TMDb API Key" Type="Text"/>
   <Config Name="Plex Library Name" Target="PLEX_LIBRARY" Default="Movies" Required="true" Mask="false" Description="Enter the Plex library name (e.g., Movies, Films, etc.)" Type="Text"/>
+  <Config Name="Web Port" Target="WEB_PORT" Default="5000" Required="true" Mask="false" Description="Enter the port number for the web UI" Type="Text"/>
 
-  <WebUI>http://[IP]:[PORT:5000]</WebUI>
+  <WebUI>http://[IP]:[PORT:WEB_PORT]</WebUI>
   <Icon>https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/plex_poster_updater/main/icon.png</Icon>
   <Banner>https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/plex_poster_updater/main/banner.png</Banner>
 
